@@ -124,12 +124,12 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if (numero % 3===0) 
-  return "fizz";
+  if (numero % 15===0) 
+  return "fizzbuzz";
   if (numero % 5===0)
   return "buzz";
-  if (numero % 15 ===0)
-  return "fizzbuzz"; 
+  if (numero % 3 ===0)
+  return "fizz"; 
   else
   return numero 
 }
@@ -141,14 +141,14 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false.
-  if (num1>num2 && num1>num3 && num1>0)
-  return "Número 1 es mayor y positivo"
-  else if (num1<0 || num2<0 || num3<0)
+  if (num1<0 || num2<0 || num3<0)
   return "Hay negativos"
-  else if(num3>num2 && num3>num1)
-  return (num3 + 1)
   else if (num1===0 || num2===0 || num3===0)
   return "Error"
+  else if (num1>num2 && num1>num3 && num1>0)
+  return "Número 1 es mayor y positivo"
+  else if(num3>num2 && num3>num1)
+  return (num3 + 1)
   else
   return false 
   
@@ -209,6 +209,13 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  var a = numero 
+  var i = 0;
+  do {i = i + 1;
+      a = a + 5;     
+
+  } while (i<=8);
+  return a;
 }
 
 
